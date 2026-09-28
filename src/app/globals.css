@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  "Lagos Dusk" — design tokens                                       */
+/* ------------------------------------------------------------------ */
+@theme {
+  /* Core palette */
+  --color-ivory: #f5efe6;
+  --color-ivory-deep: #ede3d4;
+  --color-espresso: #241a1e;
+  --color-espresso-soft: #2f2328;
+  --color-terracotta: #c1633b;
+  --color-terracotta-bright: #d1734a;
+  --color-burgundy: #6e2233;
+  --color-forest: #3e4b3c;
+  --color-brass: #b08a54;
+  --color-brass-soft: #c7a374;
+  --color-ink: #2b2320;
+  --color-ink-soft: #6a5f57;
+
+  /* Semantic aliases */
+  --color-background: var(--color-ivory);
+  --color-foreground: var(--color-ink);
+
+  /* Typography */
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Motion */
+  --ease-warm: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Layout */
+  --spacing-gutter: 1.5rem;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "kern", "liga", "calt";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-terracotta);
+    color: var(--color-ivory);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  /* Visible, on-brand focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--color-terracotta);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utilities                                                          */
+/* ------------------------------------------------------------------ */
+@layer utilities {
+  /* Small-caps editorial label */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-terracotta);
+  }
+
+  /* Fluid display size for hero-scale headings */
+  .text-display {
+    font-size: clamp(2.75rem, 8vw, 6.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+  }
+
+  .text-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.04;
+  }
+
+  /* A hairline brass rule used as a quiet divider */
+  .rule-brass {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      color-mix(in srgb, var(--color-brass) 70%, transparent),
+      transparent
+    );
+  }
+
+  /* Grain-free soft dusk overlay for imagery */
+  .overlay-dusk {
+    background: linear-gradient(
+      to top,
+      color-mix(in srgb, var(--color-espresso) 88%, transparent) 0%,
+      color-mix(in srgb, var(--color-espresso) 45%, transparent) 35%,
+      transparent 70%
+    );
+  }
+
+  /* Seamless horizontal ticker: two identical copies slide left as one. */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
+  }
+
+  .marquee-pause:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      /* One full copy of the content = 50% of the doubled track. */
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+}
