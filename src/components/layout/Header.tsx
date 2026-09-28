@@ -40,9 +40,15 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-500 ease-[var(--ease-warm)]",
-        scrolled || open
-          ? "border-b border-ink/8 bg-ivory/85 backdrop-blur-md"
-          : "border-b border-transparent",
+        // NOTE: when the menu is open the header must NOT use backdrop-blur.
+        // A backdrop-filter on an ancestor makes the fixed mobile menu resolve
+        // against the header box (~64px) instead of the viewport, so its
+        // background would only cover the top strip. Solid bg avoids that.
+        open
+          ? "bg-ivory"
+          : scrolled
+            ? "border-b border-ink/8 bg-ivory/85 backdrop-blur-md"
+            : "border-b border-transparent",
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:h-20 sm:px-8 lg:px-10">
