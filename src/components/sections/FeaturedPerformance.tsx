@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/Button";
 import { ImageFrame } from "@/components/ui/ImageFrame";
 import { PlayButton } from "@/components/media/PlayButton";
 import { VideoLightbox } from "@/components/media/VideoLightbox";
@@ -64,6 +65,15 @@ export function FeaturedPerformance() {
               </p>
             </div>
           </button>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <div className="mt-10">
+            <Button href="/music" size="lg">
+              More music
+              <span aria-hidden>→</span>
+            </Button>
+          </div>
         </Reveal>
       </Container>
 

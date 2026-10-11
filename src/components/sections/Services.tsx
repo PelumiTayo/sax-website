@@ -24,7 +24,7 @@ export function Services() {
           </Reveal>
         </div>
 
-        <RevealGroup className="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2">
           {services.map((service, i) => (
             <RevealItem key={service.title}>
               <div className="group flex h-full flex-col bg-ivory p-8 transition-colors duration-500 hover:bg-ivory-deep/50">
@@ -37,6 +37,11 @@ export function Services() {
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                   {service.blurb}
                 </p>
+                <dl className="mt-6 space-y-3 border-t border-ink/10 pt-6 text-sm leading-relaxed">
+                  <Detail label="Offerings" value={service.offerings} />
+                  <Detail label="Target audience" value={service.audience} />
+                  <Detail label="Operational focus" value={service.operations} />
+                </dl>
               </div>
             </RevealItem>
           ))}
@@ -51,5 +56,14 @@ export function Services() {
         </Reveal>
       </Container>
     </section>
+  );
+}
+
+function Detail({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <dt className="eyebrow text-brass">{label}</dt>
+      <dd className="mt-1 text-ink-soft">{value}</dd>
+    </div>
   );
 }
