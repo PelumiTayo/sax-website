@@ -52,6 +52,8 @@ export function InquiryForm() {
       next.location = "Please add a location.";
     if (!String(data.get("duration") || "").trim())
       next.duration = "Please add the performance length.";
+    if (!String(data.get("budget") || "").trim())
+      next.budget = "Please add a budget range.";
     return next;
   };
 
@@ -245,19 +247,13 @@ export function InquiryForm() {
           </AnimatePresence>
         </div>
 
-        <div>
-          <Label>Budget range</Label>
-          <div className="mt-2">
-            <Select name="budget">
-              <option value="">Prefer not to say</option>
-              <option>Still figuring it out</option>
-              <option>Under $500</option>
-              <option>$500 – $1,500</option>
-              <option>$1,500 – $5,000</option>
-              <option>$5,000+</option>
-            </Select>
-          </div>
-        </div>
+        <Field
+          label="Budget range"
+          name="budget"
+          required
+          error={errors.budget}
+          placeholder="e.g. $1,500 – $5,000, or your ballpark"
+        />
       </fieldset>
 
       {/* Honeypot, visually hidden, off the tab order */}
@@ -364,19 +360,5 @@ function Field({
       </div>
       <FieldError message={error} />
     </div>
-  );
-}
-
-function Select({
-  name,
-  children,
-}: {
-  name: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <select id={`field-${name}`} name={name} className={fieldClasses}>
-      {children}
-    </select>
   );
 }

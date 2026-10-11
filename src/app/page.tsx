@@ -13,6 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <Services />
       <Intro />
       <FeaturedPerformance />
       <VideoReel
@@ -22,7 +23,6 @@ export default function HomePage() {
       <SoundSection />
       <GalleryPreview />
       <RootedInLagos />
-      <Services />
       <ClosingCTA />
     </>
   );
