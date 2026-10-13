@@ -5,18 +5,19 @@
 /* ------------------------------------------------------------------ */
 @theme {
   /* Core palette */
-  --color-ivory: #f5efe6;
-  --color-ivory-deep: #ede3d4;
-  --color-espresso: #241a1e;
-  --color-espresso-soft: #2f2328;
-  --color-terracotta: #c1633b;
-  --color-terracotta-bright: #d1734a;
-  --color-burgundy: #6e2233;
-  --color-forest: #3e4b3c;
-  --color-brass: #b08a54;
-  --color-brass-soft: #c7a374;
-  --color-ink: #2b2320;
-  --color-ink-soft: #6a5f57;
+  --color-ivory: #f3eee3;            /* champagne cream — page background */
+  --color-ivory-deep: #e7dcc9;       /* deeper champagne — panels / alt rows */
+  --color-espresso: #101210;         /* onyx near-black — dark sections */
+  --color-espresso-soft: #1a1d19;    /* lifted onyx — cards on dark */
+  --color-terracotta: #1f5244;       /* PRIMARY accent → deep emerald (buttons, eyebrows, focus) */
+  --color-terracotta-bright: #2a6655;/* hover — lighter emerald */
+  --color-burgundy: #7a2437;         /* form errors — kept red-wine so errors still read as errors */
+  --color-forest: #38463a;           /* jewel support — deep moss */
+  --color-brass: #c2a05a;            /* antique gold — the hero metallic, pops on onyx */
+  --color-brass-soft: #d8bd86;       /* soft gold — eyebrows / labels on dark */
+  --color-ink: #1c1a16;              /* body text — warm near-black */
+  --color-ink-soft: #5f574c;         /* muted text — captions, secondary copy */
+
 
   /* Semantic aliases */
   --color-background: var(--color-ivory);

@@ -21,14 +21,14 @@ export function FeaturedPerformance() {
   };
 
   return (
-    <section className="bg-espresso py-24 text-ivory sm:py-32">
+    <section className="py-24 text-ivory sm:py-32">
       <Container width="wide">
         <div className="mb-10 max-w-2xl">
           <Reveal>
             <p className="eyebrow text-brass-soft">Featured performance</p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="text-title mt-4 text-ivory">
+            <h2 className="text-title mt-4 text-ink">
               Don&apos;t take my word for it, hear it.
             </h2>
           </Reveal>

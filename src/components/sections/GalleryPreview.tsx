@@ -8,7 +8,7 @@ export function GalleryPreview() {
   const preview = gallery.slice(0, 6);
 
   return (
-    <section className="bg-ivory-deep/40 py-24 sm:py-32">
+    <section className="bg-espresso py-24 sm:py-32">
       <Container width="wide">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
@@ -16,7 +16,7 @@ export function GalleryPreview() {
               <p className="eyebrow">Gallery</p>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="text-title mt-4">In frame</h2>
+              <h2 className="text-title mt-4 text-ivory">In frame</h2>
             </Reveal>
           </div>
           <Reveal delay={0.1}>

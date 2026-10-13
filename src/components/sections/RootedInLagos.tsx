@@ -9,7 +9,7 @@ import { rooted } from "@/content/home";
  */
 export function RootedInLagos() {
   return (
-    <section className="bg-burgundy py-20 text-ivory sm:py-36">
+    <section className="py-20 text-ink sm:py-36">
       <Container width="wide">
         <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <div>
@@ -17,7 +17,7 @@ export function RootedInLagos() {
               <p className="eyebrow text-brass-soft">{rooted.eyebrow}</p>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="mt-6 font-display text-3xl italic leading-tight text-ivory sm:text-5xl">
+              <h2 className="mt-6 font-display text-3xl italic leading-tight text-ink sm:text-5xl">
                 {rooted.title}
               </h2>
             </Reveal>
@@ -25,7 +25,7 @@ export function RootedInLagos() {
               <div className="rule-brass my-8 max-w-24" />
             </Reveal>
             <Reveal delay={0.16}>
-              <p className="max-w-xl text-lg leading-relaxed text-ivory/75">
+              <p className="max-w-xl text-lg leading-relaxed text-ink/75">
                 {rooted.body}
               </p>
             </Reveal>

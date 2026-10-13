@@ -6,7 +6,7 @@ import { intro } from "@/content/home";
 
 export function Intro() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="bg-espresso py-24 sm:py-32">
       <Container>
         <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-20">
           <Reveal>
@@ -24,13 +24,13 @@ export function Intro() {
               <p className="eyebrow">{intro.eyebrow}</p>
             </Reveal>
             <Reveal delay={0.05}>
-              <p className="mt-6 font-display text-2xl leading-snug text-ink sm:text-3xl">
+              <p className="mt-6 font-display text-2xl leading-snug text-ivory sm:text-3xl">
                 {intro.body}
               </p>
             </Reveal>
             <Reveal delay={0.12}>
               <div className="mt-8">
-                <Button href="/about" variant="ghost" className="px-0">
+                <Button href="/about" variant="ghost" className="text-ivory px-0">
                   Read my story
                   <span aria-hidden>→</span>
                 </Button>
