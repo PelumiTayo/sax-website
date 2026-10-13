@@ -25,10 +25,11 @@ export type Video = {
 
 export const videos: Video[] = [
   {
-    id: "featured-1",
+    id: "zgt4S4hlhJY",
     provider: "youtube",
     title: "Featured Performance",
     context: "Your strongest full performance",
+    poster: "https://img.youtube.com/vi/zgt4S4hlhJY/sddefault.jpg",
     posterNote:
       "FEATURED STILL: a striking frame from your best performance video, mid-phrase, eyes closed or engaged, warm stage light.",
     featured: true,

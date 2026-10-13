@@ -6,37 +6,48 @@
 export type Service = {
   title: string;
   blurb: string;
+  offerings: string;
+  audience: string;
+  operations: string;
 };
 
 export const services: Service[] = [
   {
-    title: "Weddings & Celebrations",
+    title: "Private Events (Weddings, Birthdays & Celebrations)",
     blurb:
-      "Live saxophone for ceremonies, first dances, receptions and after-parties, from tender to euphoric.",
-  },
-  {
-    title: "Private Events",
-    blurb:
-      "Intimate dinners, birthdays and gatherings that deserve a soundtrack people remember.",
+      "Tailored live music performances for private milestones, creating an engaging and memorable atmosphere for guests.",
+    offerings:
+      "Custom setlists, acoustic soloist to full ensemble configurations, professional sound reinforcement.",
+    audience: "Couples, event planners, private hosts.",
+    operations: "Seamless load-in, rider management, and client consultations.",
   },
   {
     title: "Corporate Events",
     blurb:
-      "Launches, galas, brand moments and conferences that want warmth and a touch of the unexpected.",
+      "Professional entertainment solutions designed for corporate galas, product launches, brand activations, and annual celebrations.",
+    offerings:
+      "Background jazz sets, upbeat corporate party bands, ambient instrumental interludes.",
+    audience: "Corporate event coordinators, marketing agencies, HR committees.",
+    operations:
+      "Punctuality, professional attire, scalable sound systems tailored to venue acoustic constraints.",
   },
   {
-    title: "Artist Collaborations",
+    title: "Live Shows (Festivals & Concerts)",
     blurb:
-      "Features and live sets with artists, DJs, producers and bands, on stage or in the mix.",
+      "High-energy public concert performances and major festival appearances featuring live Afrobeats and jazz arrangements.",
+    offerings:
+      "Headlining or supporting slot performances, full band production, stage lighting coordination.",
+    audience: "Festival promoters, venue bookers, music enthusiasts.",
+    operations:
+      "Technical stage plots, professional audio mixing via digital consoles, promotional alignment.",
   },
   {
-    title: "Live Shows",
+    title: "Artist Collaborations & Studio Work",
     blurb:
-      "Concerts, festivals and residencies, a full performance with presence and range.",
-  },
-  {
-    title: "Studio / Session Work",
-    blurb:
-      "Recorded saxophone for singles, films, adverts and projects that need a distinctive voice.",
+      "Creative partnerships, recording sessions, and live instrumental feature work with fellow musicians, producers, and vocalists.",
+    offerings:
+      "Session saxophone recording, horn section arrangements, co-writing, live guest features.",
+    audience: "Independent artists, music producers, recording studios.",
+    operations: "Stem delivery, chart notation, collaborative studio sessions.",
   },
 ];
