@@ -252,7 +252,7 @@ export function InquiryForm() {
           name="budget"
           required
           error={errors.budget}
-          placeholder="e.g. $1,500 – $5,000, or your ballpark"
+          placeholder="e.g. $250 – $1,500, or your ballpark"
         />
       </fieldset>
 
