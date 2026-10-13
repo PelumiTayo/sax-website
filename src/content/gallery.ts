@@ -127,4 +127,32 @@ export const gallery: Photo[] = [
     note: "Portrait.",
     orientation: "portrait",
   },
+  {
+    id: "g16",
+    src: "/gallery/AfroRave-309.jpeg",
+    alt: ALT,
+    note: "Portrait.",
+    orientation: "portrait",
+  },
+  {
+    id: "g17",
+    src: "/gallery/IMG_5136.jpg",
+    alt: ALT,
+    note: "Portrait.",
+    orientation: "portrait",
+  },
+  {
+    id: "g18",
+    src: "/gallery/IMG_5586.PNG",
+    alt: ALT,
+    note: "Portrait.",
+    orientation: "portrait",
+  },
+  {
+    id: "g19",
+    src: "/gallery/Copy of AfroRave-156.jpeg",
+    alt: ALT,
+    note: "Portrait.",
+    orientation: "portrait",
+  },
 ];
